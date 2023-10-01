@@ -190,16 +190,16 @@ function Projects() {
       </h1>
       <div className="slideshow">
         <div className="slide-1">
-          <img src="./images/slideshow/1.png"></img>
-          <img src="./images/slideshow/2.png"></img>
-          <img src="./images/slideshow/3.png"></img>
-          <img src="./images/slideshow/4.png"></img>
-          <img src="./images/slideshow/5.png"></img>
-          <img src="./images/slideshow/1.png"></img>
-          <img src="./images/slideshow/2.png"></img>
-          <img src="./images/slideshow/3.png"></img>
-          <img src="./images/slideshow/4.png"></img>
-          <img src="./images/slideshow/5.png"></img>
+          <img alt="" src="./images/slideshow/1.png"></img>
+          <img alt="" src="./images/slideshow/2.png"></img>
+          <img alt="" src="./images/slideshow/3.png"></img>
+          <img alt="" src="./images/slideshow/4.png"></img>
+          <img alt="" src="./images/slideshow/5.png"></img>
+          <img alt="" src="./images/slideshow/1.png"></img>
+          <img alt="" src="./images/slideshow/2.png"></img>
+          <img alt="" src="./images/slideshow/3.png"></img>
+          <img alt="" src="./images/slideshow/4.png"></img>
+          <img alt="" src="./images/slideshow/5.png"></img>
         </div>
       </div>
     </div>

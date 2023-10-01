@@ -6,12 +6,12 @@ function Footer() {
   return (
     <div className="Mainfooter">
       <div className="contact">
-        <img src="./images/intrested.png"></img>
+        <img alt="" src="./images/intrested.png"></img>
         <button onClick={() => {navigate('/contact')}}>Let's chat!</button>
       </div>
       <img className="firas-img" src="./images/white-firas.png" alt="" />
       <h3 className="pixels">Everyday, we level up.</h3>
-      <img className="up-1" src="./images/1up.png" />
+      <img className="up-1" alt="" src="./images/1up.png" />
       <p>
         <a href="https://www.linkedin.com/in/firas-najjar-9b4a09221/" className="socialLinks">
           <span className="icon">
