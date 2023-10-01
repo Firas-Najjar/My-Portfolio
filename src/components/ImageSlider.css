@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.MainBodyDiv {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 75px);
+  min-height: 300px;
+  font-family: "Poppins", sans-serif;
+  overflow:hidden;
+}
+.MainBodyDiv .ImageContainer{
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+}
+.hero-title {
+  padding: 70px 0px;
+  font-size: 2.1vw;
+  z-index: 10;
+  width: 100%;
+}
+.hero-title h1{
+  position: relative;
+  text-shadow: #fff 1px 0 25px;
+  z-index: 10;
+  width: 70vw;
+  margin: 0px 15vw;
+}
+.mainImage{
+  position: absolute;  
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+.span-svg{
+  position: relative;
+  left: 0;
+  right: 0;
+  top: auto;
+}
+.div-svg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: -2.2vw;
+  z-index: -1;
+}
+.lowerDiv{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.upperDiv{
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  top: 0;
+  overflow:hidden;
+  z-index: 10;
+  border-right: solid blueviolet 3px ;
+  box-sizing: border-box;
+}

@@ -1,0 +1,108 @@
+.contact-Header {
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    border-bottom: solid 1px rgba(149, 156, 180, 0.3) ;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.contact-Header .X {
+    width: 20px;
+    min-width: 20px;
+    margin: auto 6vw;
+    cursor: pointer;
+}
+.contact-Header .reset {
+    width: 25px;
+    min-width: 25px;
+    margin: auto 6vw;
+    cursor: pointer;
+}
+.form{
+    width: 650px;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+}
+.Logo {
+    height: 60px;
+    object-fit: cover;
+    margin: auto 5vw;
+}
+.content{
+    text-align: center;
+}
+.content .thanksMsg{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+.content .fields{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px
+}
+.content .field{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: left;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.content input, textarea{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px ;
+    border: solid 2px rgb(153, 168, 191, 0.3);
+    resize: vertical;
+    color: #141c3a;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.content .Msg {
+    box-sizing: inherit;
+    text-align: left;
+    padding: 12px;
+}
+.form .Submit{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: #6e07f3;
+    background-color: white;
+    border-radius: 40px ;
+    font-family: "Poppins", sans-serif;
+    padding: 8px;
+    border: #6e07f3 solid 1px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    transition: 0.2s ease-in-out;
+}
+.form .Submit:hover{
+    color: #ffffff;
+    background-color: #6e07f3;
+    transition: 0.2s ease-in-out;
+}
+@media only screen and (max-width: 700px) {
+    .fields {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+    .form .fields .field {
+        width: 100%!important;
+      }
+      .form {
+        width: 90%!important;
+      }
+    .Msg div{
+        padding: 0 50px;
+    }
+    .thanksMsg{
+        font-size: 4vw!important;
+    }
+  }
