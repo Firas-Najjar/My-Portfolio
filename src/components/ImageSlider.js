@@ -3,20 +3,22 @@ import "./ImageSlider.css";
 
 function ImageSlider() {
   const upperDivRef = useRef();
+  if (window.innerWidth > 750) {
+    if (upperDivRef) {
+      const HandleOnMove = (e) => {
+        const p = (e.clientX / window.innerWidth) * 100;
 
-  if (upperDivRef) {
-    const HandleOnMove = (e) => {
-      const p = (e.clientX / window.innerWidth) * 100;
+        if (upperDivRef.current) {
+          upperDivRef.current.style.width = `${p}%`;
+        }
+      };
 
-      if(upperDivRef.current){
-      upperDivRef.current.style.width = `${p}%`;
-      }
-    };
+      document.onmousemove = (e) => HandleOnMove(e);
 
-    document.onmousemove = (e) => HandleOnMove(e);
-
-    document.ontouchmove = (e) => HandleOnMove(e.touches[0]);
+      document.ontouchmove = (e) => HandleOnMove(e.touches[0]);
+    }
   }
+
   return (
     <div className="MainBodyDiv">
       <div className="lowerDiv">
