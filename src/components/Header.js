@@ -10,6 +10,7 @@ function Header() {
       <div className="HeaderAction">
         <h2>
           <a
+            href="#"
             onClick={() => {
               navigate("/contact");
             }}
