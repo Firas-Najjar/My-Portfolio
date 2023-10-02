@@ -9,22 +9,22 @@ function Header() {
       <img className="name" alt="name" src="/images/firas-Logo.png" />
       <div className="HeaderAction">
         <h2>
-          <a
-            href="#"
+          <div
+          className="contactLink"
             onClick={() => {
               navigate("/contact");
             }}
           >
             contact
-          </a>
+          </div>
         </h2>
         <div className="btn">
           <a
             href={Resume}
             download="Firas-Najjar-Resume"
-            style={{ cursor: "default" }}
+            style={{ cursor: "default", textDecoration: "none"}}
           >
-            <button type="submit">Download Resume</button>
+            <button type="submit" className="Resume">Download Resume</button>
           </a>
         </div>
       </div>

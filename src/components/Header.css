@@ -10,7 +10,7 @@
     z-index: 100;
     font-family: 'poppins', sans-serif;
 }
-.Header a {
+.Header .contactLink {
     text-decoration: none;
     color: #141c3a;
     cursor: pointer;
@@ -26,7 +26,7 @@
     letter-spacing: 1.5px;
     font-size: 20px;
 }
-.HeaderAction button{
+.HeaderAction .Resume{
     width: calc(3vw + 150px);
     height: 40px;
     border: 0;
@@ -72,7 +72,7 @@
     .HeaderAction h2, .btn{
         justify-content: center;
     }
-    .HeaderAction .btn button{
+    .HeaderAction .btn .Resume{
         font-size: 0.9rem;
     }
   }
