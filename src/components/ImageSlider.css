@@ -67,3 +67,13 @@
   border-right: solid blueviolet 3px ;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 650px) {
+  .hero-title {
+    padding: 8vw 0px;
+    font-size: 3.1vw;
+  }
+  .hero-title h1{
+    width: 80vw;
+    margin: 0px 10vw;
+  }
+}

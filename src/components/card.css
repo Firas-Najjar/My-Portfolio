@@ -58,5 +58,32 @@
 
 @media only screen and (max-width: 750px) {
   .card {flex-direction: column;}
-  .column{width: 100%!important; border: none!important;}
+  .column{
+    width: 100%!important;
+    border: none!important;
+    padding: 13vw 4vw!important;
+  }
+  .card .column svg {
+    width: 10vw;
+  }
+  .card .column h1 {
+    font-size: 4vw;
+    margin: 3vw 0px;
+  }
+  .card .column .discription {
+    margin: 2vw 0 0 0;
+    font-size: 3vw;
+  }
+  .card .column .title {
+    font-size: 3vw!important;
+    margin-top: 7vw;
+    margin-bottom: 0vw;
+  }
+  .card .column ul {
+    margin-top: 3vw;
+    font-size: 3vw;
+  }
+  .card > :first-child {
+    border-bottom: 1px solid #e6ecf8!important;
+  }
 }

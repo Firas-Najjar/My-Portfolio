@@ -54,7 +54,22 @@
 
 @media only screen and (max-width: 750px) {
   .MainDiv {
-    padding: 12vw 1.5vw;
+    padding: 12vw 0vw;
   }
   .column{width: 100%!important;}
+  .MainDiv .container .text h1 {
+    font-size: 6vw;
+  }
+  .MainDiv .container .text h2 {
+    font-size: 3vw;
+    width: 80vw;
+    margin: 9vw auto 150px auto;
+    line-height: 4.5vw;
+  }
+  .MainDiv .container .text h3 {
+    font-size: 2.5vw;
+  }
+  .firasSVG {
+    top: 10vw;
+  }
 }

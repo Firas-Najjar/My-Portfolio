@@ -45,7 +45,7 @@ function Contact() {
           <br />
           How can I make your day a little bit better?
         </h1>
-        <form className="form" action="https://formsubmit.co/26634a54b7a9d62b88d0e6063790cbd0" method="POST">
+        <form className="form" action="https://formsubmit.co/its.FirasNajjar@gmail.com" method="POST">
 
             {/* honeypot */}
             <input type="text" name="_honey" style={{display: "none"}} />

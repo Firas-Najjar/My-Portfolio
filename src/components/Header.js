@@ -1,9 +1,9 @@
 import "./Header.css";
-import file from '../1up.png'
+import Resume from "../Resume.pdf";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
-    let navigate = useNavigate();
+  let navigate = useNavigate();
   return (
     <div className="Header">
       <img className="name" alt="name" src="/images/firas-Logo.png" />
@@ -13,13 +13,18 @@ function Header() {
             onClick={() => {
               navigate("/contact");
             }}
-            href={file}
           >
             contact
           </a>
         </h2>
         <div className="btn">
-          <a href="/" style={{cursor: "default"}}><button type="submit">Download CV</button></a>
+          <a
+            href={Resume}
+            download="Firas-Najjar-Resume"
+            style={{ cursor: "default" }}
+          >
+            <button type="submit">Download Resume</button>
+          </a>
         </div>
       </div>
     </div>
