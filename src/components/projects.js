@@ -43,7 +43,12 @@ function Projects() {
       <div className="projectsDiv">
         <div className="block marginTop">
           <div className="image">
-            <LazyLoadImage className="img" src="./images/login.png" alt="" />
+            <LazyLoadImage
+              effect="blur"
+              className="img"
+              src="./images/login.png"
+              alt=""
+            />
             <div className="background"></div>
           </div>
           <div className="text">
@@ -104,8 +109,14 @@ function Projects() {
             </p>
           </div>
           <div className="image left">
-            <LazyLoadImage className="img leftimg" src="./images/table.png" alt="" />
             <LazyLoadImage
+              effect="blur"
+              className="img leftimg"
+              src="./images/table.png"
+              alt=""
+            />
+            <LazyLoadImage
+              effect="blur"
               className="img leftimg secondimg"
               src="./images/signin.png"
               alt=""
@@ -116,8 +127,14 @@ function Projects() {
         <hr></hr>
         <div className="block">
           <div className="image long">
-            <LazyLoadImage className="img" src="./images/calendar.png" alt="" />
             <LazyLoadImage
+              effect="blur"
+              className="img"
+              src="./images/calendar.png"
+              alt=""
+            />
+            <LazyLoadImage
+              effect="blur"
               className="img secondimg"
               src="./images/DiagLogin.png"
               alt=""
