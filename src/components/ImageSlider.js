@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import "./ImageSlider.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function ImageSlider() {
   const upperDivRef = useRef();
@@ -25,7 +26,7 @@ function ImageSlider() {
         <img
           className="mainImage"
           alt="mainImage"
-          src="/images/blue-portfolio-hero-image.png"
+          src="/images/blue-portfolio-hero-image.webp"
         />
 
         <div className="hero-title">
@@ -55,10 +56,10 @@ function ImageSlider() {
         </div>
       </div>
       <div ref={upperDivRef} className="upperDiv">
-        <img
+        <LazyLoadImage
           className="mainImage"
           alt="mainImage"
-          src="/images/portfolio-hero-image.png"
+          src="/images/portfolio-hero-image.webp"
         />
         <div className="hero-title">
           <center>

@@ -1,4 +1,5 @@
 import "./Projects.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Projects() {
   return (
@@ -42,7 +43,7 @@ function Projects() {
       <div className="projectsDiv">
         <div className="block marginTop">
           <div className="image">
-            <img className="img" src="./images/login.png" alt="" />
+            <LazyLoadImage className="img" src="./images/login.png" alt="" />
             <div className="background"></div>
           </div>
           <div className="text">
@@ -103,8 +104,8 @@ function Projects() {
             </p>
           </div>
           <div className="image left">
-            <img className="img leftimg" src="./images/table.png" alt="" />
-            <img
+            <LazyLoadImage className="img leftimg" src="./images/table.png" alt="" />
+            <LazyLoadImage
               className="img leftimg secondimg"
               src="./images/signin.png"
               alt=""
@@ -115,8 +116,8 @@ function Projects() {
         <hr></hr>
         <div className="block">
           <div className="image long">
-            <img className="img" src="./images/calendar.png" alt="" />
-            <img
+            <LazyLoadImage className="img" src="./images/calendar.png" alt="" />
+            <LazyLoadImage
               className="img secondimg"
               src="./images/DiagLogin.png"
               alt=""
