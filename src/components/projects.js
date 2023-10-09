@@ -110,13 +110,11 @@ function Projects() {
           </div>
           <div className="image left">
             <LazyLoadImage
-              effect="blur"
               className="img leftimg"
               src="./images/table.png"
               alt=""
             />
             <LazyLoadImage
-              effect="blur"
               className="img leftimg secondimg"
               src="./images/signin.png"
               alt=""
