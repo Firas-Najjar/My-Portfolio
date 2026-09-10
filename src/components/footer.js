@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom";
 function Footer() {
     let navigate = useNavigate();
   return (
-    <div className="Mainfooter">
+    <div id="contact" className="Mainfooter">
       <div className="contact">
-        <img alt="" src="./images/intrested.png"></img>
+        <img alt="Interested in collaborating?" src="/images/intrested.webp" loading="eager" />
         <button onClick={() => {navigate('/contact')}}>Let's chat!</button>
       </div>
-      <img className="firas-img" src="./images/white-firas.png" alt="" />
+      <img className="firas-img" src="/images/white-firas.webp" alt="Firas Najjar" loading="eager" />
       <h3 className="pixels">Everyday, we level up.</h3>
-      <img className="up-1" alt="" src="./images/1up.png" />
+      <img className="up-1" alt="1up" src="/images/1up.webp" onError={(e) => { e.target.src = "/images/1up.png"; }} loading="eager" />
       <p>
-        <a href="https://www.linkedin.com/in/firas-najjar-9b4a09221/" className="socialLinks">
+        <a href="https://www.linkedin.com/in/firas-najjar-9b4a09221/" target="_blank" rel="noopener noreferrer" className="socialLinks">
           <span className="icon">
             <svg
               aria-hidden="true"
@@ -32,7 +32,7 @@ function Footer() {
             </svg>
           </span>
         </a>
-        <a href="mailto:fir.fawzi@gamil.com" className="socialLinks">
+        <a href="mailto:fir.fawzi@gmail.com" className="socialLinks">
           <span className="icon">
             <svg
               aria-hidden="true"

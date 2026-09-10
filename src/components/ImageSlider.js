@@ -1,32 +1,36 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./ImageSlider.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function ImageSlider() {
   const upperDivRef = useRef();
-  if (window.innerWidth > 750) {
-    if (upperDivRef) {
-      const HandleOnMove = (e) => {
-        const p = (e.clientX / window.innerWidth) * 100;
 
-        if (upperDivRef.current) {
-          upperDivRef.current.style.width = `${p}%`;
-        }
-      };
+  useEffect(() => {
+    const handleMove = (e) => {
+      if (window.innerWidth <= 750) return;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      if (clientX !== undefined && upperDivRef.current) {
+        const p = Math.max(0, Math.min(100, (clientX / window.innerWidth) * 100));
+        upperDivRef.current.style.width = `${p}%`;
+      }
+    };
 
-      document.onmousemove = (e) => HandleOnMove(e);
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("touchmove", handleMove);
 
-      document.ontouchmove = (e) => HandleOnMove(e.touches[0]);
-    }
-  }
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("touchmove", handleMove);
+    };
+  }, []);
 
   return (
     <div className="MainBodyDiv">
       <div className="lowerDiv">
         <img
           className="mainImage"
-          alt="mainImage"
+          alt="Modern Innovations background"
           src="/images/blue-portfolio-hero-image.webp"
+          loading="eager"
         />
 
         <div className="hero-title">
@@ -56,10 +60,11 @@ function ImageSlider() {
         </div>
       </div>
       <div ref={upperDivRef} className="upperDiv">
-        <LazyLoadImage
+        <img
           className="mainImage"
-          alt="mainImage"
+          alt="Modern Developers background"
           src="/images/portfolio-hero-image.webp"
+          loading="eager"
         />
         <div className="hero-title">
           <center>

@@ -22,7 +22,7 @@ function Contact() {
             d="M800.48 50.77l-65.06 63.64c-175.33-152.39-440.6-143.4-605.41 21.13C45.97 219.43-.38 331.03-.48 449.78c-.1 118.75 46.04 230.43 129.94 314.48 86.71 86.86 200.65 130.65 314.78 130.65 106.18 0 212.53-37.9 297.26-114.28 20.16-18.17 21.78-49.25 3.6-69.41-18.18-20.16-49.25-21.78-69.41-3.6-136.92 123.41-346.3 117.79-476.66-12.8C64.13 559.68 64.32 340 199.45 205.1 325.93 78.85 528.31 70.2 664.83 183.45l-63.39 62c-33.85 33.11-10.77 90.61 36.57 91.14l196.86 2.18c29.35.32 53.41-23.21 53.73-52.56l2.18-196.86c.53-47.34-56.45-71.69-90.3-38.58z"
           ></path>
         </svg>
-        <img className="Logo" alt="name" src="/images/firas-Logo.png" />
+        <img className="Logo" alt="Firas Najjar" src="/images/firas-Logo.webp" onError={(e) => { e.target.src = "/images/firas-Logo.png"; }} />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           x="0"
@@ -43,7 +43,7 @@ function Contact() {
         <h1 className="thanksMsg">
           Thanks for getting in touch!
           <br />
-          How can I make your day a little bit better?
+          How can I help bring your vision to life?
         </h1>
         <form className="form" action="https://formsubmit.co/75f5559e0abffc1bcf19023a07ef45a7" method="POST">
 
@@ -56,12 +56,12 @@ function Contact() {
           <div className="fields">
             <div className="field">
               <label>Name</label>
-              <input type="Text" style={{ marginRight: "30px" }} name="Name" required></input>
+              <input type="text" style={{ marginRight: "30px" }} name="Name" placeholder="Your name" required></input>
             </div>
 
             <div className="field">
               <label>Email</label>
-              <input type="Text" name="eMail" required></input>
+              <input type="email" name="eMail" placeholder="your.email@example.com" required></input>
             </div>
           </div>
           <div className="Msg">

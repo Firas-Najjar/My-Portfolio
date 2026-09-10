@@ -2,21 +2,21 @@ import "./ScrollBody.css";
 
 function ScrollBody() {
   return (
-    <div className="MainDiv">
+    <div id="about" className="MainDiv">
       <div className="container">
         <div className="text">
           <h1>Hey, I’m Firas Najjar</h1>
           <h3>
-            I’m a <span className="bold">graphic designer</span> &{" "}
-            <span className="bold">front-end web developer</span>
+            I’m a <span className="bold">Product &amp; UI/UX Designer</span> &amp;{" "}
+            <span className="bold">Full-Stack Web Developer</span>
           </h3>
           <h2>
             Ever since I was a kid, I've always been curious about how stuff
-            worksand how things are made, coupled with a keen eye for detail.
-            This inclination eventually led me to discover web development and
-            graphic design, which proved to be transformative experiences in my
-            life. So, I decided to study computer science, and that's when I
-            started my journey in front-end web development
+            works and how things are made, coupled with a keen eye for detail.
+            This inclination led me to explore computer science, graphic design,
+            and modern full-stack development. Today, I specialize in crafting
+            clean, high-performance web applications and intuitive SaaS platforms
+            that bring ambitious digital ideas to life.
           </h2>
         </div>
       </div>

@@ -6,43 +6,81 @@
   position: relative;
   width: 100vw;
   height: calc(100vh - 75px);
-  min-height: 300px;
+  min-height: 480px;
   font-family: "Poppins", sans-serif;
-  overflow:hidden;
-}
-.MainBodyDiv .ImageContainer{
   overflow: hidden;
+}
+
+.lowerDiv {
   position: absolute;
   width: 100vw;
+  min-width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
+
+.upperDiv {
+  position: absolute;
+  width: 50%;
+  max-width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
+  border-right: solid blueviolet 3px;
+  box-sizing: border-box;
+}
+
+/* Fixed full-viewport layer so text coordinates are identical in both layers */
 .hero-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-width: 100vw;
   padding: 70px 0px;
   font-size: 2.1vw;
   z-index: 10;
-  width: 100%;
+  pointer-events: none;
 }
-.hero-title h1{
+
+.hero-title h1 {
   position: relative;
-  text-shadow: #fff 1px 0 25px;
+  font-size: clamp(2.2rem, 3.4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: #141c3a;
+  text-shadow: 0 2px 25px rgba(255, 255, 255, 0.95);
   z-index: 10;
   width: 70vw;
   margin: 0px 15vw;
 }
-.mainImage{
+
+.mainImage {
   position: absolute;  
   width: 100vw;
+  min-width: 100vw;
   height: 100%;
   top: 0;
+  left: 0;
   object-fit: cover;
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
 }
-.span-svg{
+
+.span-svg {
   position: relative;
   left: 0;
   right: 0;
   top: auto;
+  display: inline-block;
 }
-.div-svg{
+
+.div-svg {
   position: absolute;
   left: 0;
   right: 0;
@@ -50,30 +88,15 @@
   bottom: -2.2vw;
   z-index: -1;
 }
-.lowerDiv{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-.upperDiv{
-  position: absolute;
-  width: 100%;
-  max-width: 100vw;
-  height: 100%;
-  top: 0;
-  overflow:hidden;
-  z-index: 10;
-  border-right: solid blueviolet 3px ;
-  box-sizing: border-box;
-}
-@media only screen and (max-width: 650px) {
+
+@media only screen and (max-width: 750px) {
   .hero-title {
     padding: 8vw 0px;
     font-size: 3.1vw;
   }
-  .hero-title h1{
+  .hero-title h1 {
     width: 80vw;
     margin: 0px 10vw;
+    font-size: 1.85rem;
   }
 }

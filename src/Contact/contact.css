@@ -50,41 +50,61 @@
     box-sizing: border-box;
 }
 
-.content input, textarea{
-    height: 40px;
-    width: 100%;
-    border-radius: 5px ;
-    border: solid 2px rgb(153, 168, 191, 0.3);
-    resize: vertical;
-    color: #141c3a;
-    font-size: 18px;
-    font-family: "Poppins", sans-serif;
-    padding: 5px 10px;
-    box-sizing: border-box;
+.content input, textarea {
+  height: 48px;
+  width: 100%;
+  border-radius: 10px;
+  border: solid 2px rgba(153, 168, 191, 0.4);
+  resize: vertical;
+  color: #141c3a;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+.content input:focus, textarea:focus {
+  outline: none;
+  border-color: #6e07f3;
+  box-shadow: 0 0 0 4px rgba(110, 7, 243, 0.12);
+}
+.content .field label,
+.content .Msg label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #1e293b;
+  margin-bottom: 6px;
 }
 .content .Msg {
-    box-sizing: inherit;
-    text-align: left;
-    padding: 12px;
+  box-sizing: inherit;
+  text-align: left;
+  padding: 12px;
 }
-.form .Submit{
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    color: #6e07f3;
-    background-color: white;
-    border-radius: 40px ;
-    font-family: "Poppins", sans-serif;
-    padding: 8px;
-    border: #6e07f3 solid 1px;
-    margin-top: 50px;
-    margin-bottom: 70px;
-    transition: 0.2s ease-in-out;
+.form .Submit {
+  width: 200px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6e07f3;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+  border: #6e07f3 solid 2px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(110, 7, 243, 0.15);
 }
-.form .Submit:hover{
-    color: #ffffff;
-    background-color: #6e07f3;
-    transition: 0.2s ease-in-out;
+.form .Submit:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #6e07f3 0%, #9333ea 100%);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(110, 7, 243, 0.35);
 }
 @media only screen and (max-width: 700px) {
     .fields {

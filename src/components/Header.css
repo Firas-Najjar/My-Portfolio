@@ -1,78 +1,257 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-.Header{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    width: 100vw;
-    height: 75px;
-    z-index: 100;
-    font-family: 'poppins', sans-serif;
-}
-.Header .contactLink {
-    text-decoration: none;
-    color: #141c3a;
-    cursor: pointer;
-}
-.HeaderAction{
-    display: flex;
-    margin: 15px 60px;
-}
-.HeaderAction h2{
-    display: flex;
-    margin: 10px;
-    align-items: center;
-    letter-spacing: 1.5px;
-    font-size: 20px;
-}
-.HeaderAction .Resume{
-    width: calc(3vw + 150px);
-    height: 40px;
-    border: 0;
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-    background-color: #7E1DDC;
-    color: aliceblue;
-    align-items: center;
-    font-size: 15px;
-    font-family: 'poppins', sans-serif;
-    margin-left: calc(1vw + 5px);
-    font-weight: 400;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-.HeaderAction .btn{
-    display: flex;
-    align-items: center;
-}
-.name{
-    margin: 13px 70px;
-    object-fit: cover;
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media only screen and (max-width: 650px) {
-    .Header {
-      flex-direction: column;
-      justify-content: center;
-      height: auto;
-    }
-    .Header .name{
-        width: 20vw;
-        margin: 7vw auto 0 auto;
-    }
-    .HeaderAction{
-        flex-direction: column;
-        margin-top: 3vw;
-    }
-    .HeaderAction h2{
-        margin-top: 0;
-    }
-    .HeaderAction h2, .btn{
-        justify-content: center;
-    }
-    .HeaderAction .btn .Resume{
-        font-size: 0.9rem;
-    }
+.Header.scrolled {
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 4px 20px -2px rgba(20, 28, 58, 0.08);
+  height: 70px;
+}
+
+.HeaderContainer {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.logoWrapper:hover {
+  transform: scale(1.02);
+}
+
+.name {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.NavLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 20px;
+  height: 2px;
+  background: #6E07F3;
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
+
+.navLink:hover {
+  color: #6E07F3;
+}
+
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.contactBtnLink {
+  display: none;
+}
+
+.mobileResume {
+  display: none;
+}
+
+.HeaderAction {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.HeaderAction .contactLink {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #141c3a;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.HeaderAction .contactLink:hover {
+  color: #6E07F3;
+  background-color: rgba(110, 7, 243, 0.05);
+}
+
+.resumeAnchor {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.Resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 42px;
+  padding: 0 1.4rem;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #7E1DDC 0%, #6E07F3 100%);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(110, 7, 243, 0.3);
+  transition: all 0.25s ease;
+}
+
+.Resume:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(110, 7, 243, 0.45);
+  background: linear-gradient(135deg, #8b25ec 0%, #7c18fc 100%);
+}
+
+.Resume:active {
+  transform: translateY(0);
+}
+
+.downloadIcon {
+  transition: transform 0.2s ease;
+}
+
+.Resume:hover .downloadIcon {
+  transform: translateY(2px);
+}
+
+/* Mobile Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #141c3a;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.bar.active:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.bar.active:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 868px) {
+  .hamburger {
+    display: flex;
   }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .NavLinks {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .NavLinks.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navLink {
+    font-size: 1.15rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .contactBtnLink {
+    display: block;
+    color: #6E07F3;
+    font-weight: 600;
+  }
+
+  .mobileResume {
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobileResume .Resume {
+    width: 100%;
+    justify-content: center;
+  }
+}

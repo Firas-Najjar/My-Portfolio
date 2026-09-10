@@ -2,7 +2,7 @@ import './card.css'
 
 function Card() {
     return(
-        <div className="card">
+        <div id="skills" className="card">
         <div className="column">
           <svg
             className="DesignSVG"
@@ -33,18 +33,18 @@ function Card() {
           <h1>Designer</h1>
           <p className="discription">
             I appreciate straightforward content organization, uncluttered
-            design principles,
-            <br /> and deliberate user interactions.
+            design principles, and deliberate user interactions.
           </p>
           <p className="title">Things I enjoy designing:</p>
-          <p className="discription">UX, UI, Web, Apps, Logos, Posters</p>
+          <p className="discription">UI/UX, SaaS Interfaces, Design Systems, Apps, Branding</p>
           <p className="title">Design Tools:</p>
-          <ul>
-            <li>Illustrator</li>
-            <li>Photoshop</li>
-            <li>Font Awsome</li>
+          <ul className="skills-list">
             <li>Figma</li>
-            <li>Pen & paper</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>Design Systems</li>
           </ul>
         </div>
 
@@ -68,22 +68,22 @@ function Card() {
               d="M696.55 239.43c6.18 1.78 11.01 6.62 12.88 12.77 3.27 10.82 6.1 22.91 12.58 32.3 1.27 1.84 3.97 1.9 5.26.07 6.56-9.32 8.4-21.74 12.56-32.29 2.01-5.1 7.89-10.87 13.01-12.82 10.64-4.04 23.64-5.57 31.61-13.95.26-.28.54-.6.53-.99-.01-.28-.17-.53-.33-.76-6.79-9.64-24.62-10.97-34.93-15.36-3.78-1.61-7.63-5.47-9.25-9.25-4.44-10.41-5.89-27.06-14.85-34.73-.25-.21-.53-.43-.86-.43-.29 0-.55.16-.79.32-9.44 6.4-11.92 23.44-14.97 33.62-1.8 6-5.2 9.65-11.28 11.41-10.08 2.92-26.85 5.13-33.18 14.48-.15.22-.29.45-.3.71-.01.34.21.64.43.9 7.05 8.39 21.4 10.97 31.88 14zM792.63 296.3c4.71 1.63 9.09 4.54 12.21 8.45 4.66 5.83 4.18 15.9 10.23 20.14.25.17.52.34.83.34.32-.01.6-.21.85-.42 3.73-3.17 3.83-8.19 5.47-12.41 1.77-4.54 4.78-8.72 8.59-11.76 5.65-4.5 14.5-4.54 19.91-8.81 1.02-.81 1.15-2.36.21-3.26-4.08-3.91-10.47-5.52-15.7-6.9-6.35-1.68-10.22-5.45-11.79-11.82-1.2-4.86-3-9.34-6.17-13.14-.9-1.07-2.56-.98-3.42.12-4.38 5.6-4.67 12.62-8.93 18.35-3.06 4.12-7.58 6.89-12.5 8.23-1.46.4-13.29 3.32-11.74 6.22 2.6 4.86 7.33 5.07 11.95 6.67z"
             ></path>
           </svg>
-          <h1>Frontend Developer</h1>
+          <h1>Full-Stack Developer</h1>
           <p className="discription">
-            I prefer building things from the ground up with code <br />and take
-            pleasure in translating concepts<br /> into interactive web experiences.
+            I engineer high-performance web applications and SaaS platforms from the ground up,
+            bridging sleek interfaces with reliable architectures.
           </p>
-          <p className="title">What i can code with:</p>
-          <p className="discription">HTML, css/scss, javascript/typescript, jsx</p>
-          <p className="title">Dev Tools:</p>
-          <ul>
-            <li>ReactJS</li>
-            <li>Angular</li>
+          <p className="title">Languages &amp; Core:</p>
+          <p className="discription">TypeScript, JavaScript (ES6+), React 18, Next.js 14, HTML5, CSS/SCSS</p>
+          <p className="title">Dev Tools &amp; Stack:</p>
+          <ul className="skills-list">
+            <li>Next.js &amp; React</li>
+            <li>Tailwind CSS</li>
             <li>Node.js</li>
-            <li>Tailwind</li>
-            <li>Github</li>
-            <li>vscode</li>
-            <li>Terminal</li>
+            <li>MongoDB &amp; REST APIs</li>
+            <li>Clerk Auth &amp; Vercel</li>
+            <li>Git &amp; GitHub</li>
+            <li>VS Code &amp; Terminal</li>
           </ul>
         </div>
       </div>

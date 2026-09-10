@@ -3,128 +3,734 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .container .title {
   font-family: "Poppins", sans-serif;
-  font-size: 4vw;
+  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  font-weight: 700;
   color: #141c3a;
-  margin: 0 auto;
+  margin: 3.5rem auto 1.5rem auto;
+  position: relative;
+  text-align: center;
+  letter-spacing: -0.02em;
 }
 .container .title .rectangle {
-    position: absolute;
-    width: 20vw; 
-    transform: translateX(-15.9vw) translateY(-2.3vw);
-    z-index: -1;
-   }
+  position: absolute;
+  width: 16vw; 
+  max-width: 210px;
+  transform: translateX(-12vw) translateY(-1.8vw);
+  z-index: -1;
+}
+.container .title .circle {
+  position: absolute;
+  width: 9vw;
+  max-width: 120px;
+  transform: translateX(-4vw) translateY(-0.8vw);
+  z-index: -1;
+}
+
+/* ==========================================================================
+   FEATURED FLAGSHIP SAAS PROJECT (LIGHT-INSIGHT) - OPTIMIZED FOR CENTER
+   ========================================================================== */
+.featured-saas-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2vw 5vw 4vw 5vw;
+}
+
+.featured-saas-card {
+  background: linear-gradient(145deg, #111424 0%, #1a1532 50%, #0d1222 100%);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 24px;
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 35px rgba(110, 7, 243, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-saas-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.featured-saas-card:hover {
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.7), 0 0 45px rgba(110, 7, 243, 0.35);
+}
+
+.featured-saas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.featured-badges {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.featured-pill {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.featured-pill.main-pill {
+  background: linear-gradient(135deg, rgba(110, 7, 243, 0.35), rgba(168, 85, 247, 0.25));
+  color: #e9d5ff;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+}
+
+.featured-pill.status-pill {
+  background: rgba(91, 233, 185, 0.12);
+  color: #5be9b9;
+  border: 1px solid rgba(91, 233, 185, 0.4);
+}
+
+.badge-star-icon {
+  color: #facc15;
+}
+
+.live-demo-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #6e07f3 0%, #9333ea 100%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(110, 7, 243, 0.4);
+  transition: all 0.25s ease;
+}
+
+.live-demo-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7e1ddc 0%, #a855f7 100%);
+  box-shadow: 0 8px 25px rgba(110, 7, 243, 0.6);
+}
+
+.featured-saas-content {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.featured-saas-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.saas-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.saas-logo-icon {
+  width: 90px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.saas-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 40%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.saas-tagline {
+  color: #5be9b9;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+}
+
+.saas-description {
+  color: #cbd5e1;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0 0 20px 0;
+}
+
+.saas-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.saas-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.feature-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(91, 233, 185, 0.1);
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.saas-feature-item strong {
+  display: block;
+  color: #f1f5f9;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.saas-feature-item p {
+  color: #94a3b8;
+  font-size: 0.84rem;
+  margin: 3px 0 0 0;
+  line-height: 1.4;
+}
+
+.tech-stack-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tech-stack-label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-badges-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  background: rgba(110, 7, 243, 0.2);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.saas-action-cta {
+  display: flex;
+  align-items: center;
+}
+
+.primary-saas-cta {
+  font-family: "Poppins", sans-serif;
+  color: #5be9b9;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.primary-saas-cta:hover {
+  color: #7efcd0;
+  transform: translateX(4px);
+}
+
+/* Browser Mockup Frames */
+.featured-saas-visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+}
+
+.mockup-frame {
+  background: #181d2f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.mockup-frame:hover {
+  transform: translateY(-4px);
+}
+
+.mockup-header-bar {
+  background: #0f1322;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mockup-header-bar .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.mockup-header-bar .dot.red { background: #ef4444; }
+.mockup-header-bar .dot.yellow { background: #eab308; }
+.mockup-header-bar .dot.green { background: #22c55e; }
+
+.mockup-url {
+  color: #64748b;
+  font-family: monospace;
+  font-size: 0.72rem;
+  margin-left: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 10px;
+  border-radius: 4px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mockup-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   WEB PROJECTS SHOWCASE (SIGNATURE EDGE-BLEED COMPOSITION - OPTIMIZED & INTENTIONAL)
+   ========================================================================== */
+.container .projectsDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 1.5rem 0;
+}
+
+.container .projectsDiv .block {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  min-height: 440px;
+  padding: 1.5rem 0;
+}
+
+/* Left/Right Text Column */
+.container .projectsDiv .block .text {
+  box-sizing: border-box;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 7vw;
+  z-index: 5;
+}
+
+.container .projectsDiv .block .text .project-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(110, 7, 243, 0.08);
+  border: 1px solid rgba(110, 7, 243, 0.15);
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(110, 7, 243, 0.08);
+}
+
+.container .projectsDiv .block .text .project-icon-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.container .projectsDiv .block .text h1 {
+  color: #141c3a;
+  font-size: clamp(1.4rem, 1.8vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px 0;
+}
+
+.container .projectsDiv .block .text p {
+  color: #475569;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 0.98rem;
+  margin: 0 0 16px 0;
+  max-width: 480px;
+}
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.project-tags span {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.project-tags span:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  color: #141c3a;
+}
+
+/* Image Showcase & Edge Bleed Pill Canvas */
+.container .projectsDiv .block .image {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+}
+
+.container .projectsDiv .block .left {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Standard Single Image (Project 1: User Registration) */
+.container .projectsDiv .block .image .img {
+  position: absolute;
+  border-radius: 16px;
+  margin-left: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 270px;
+  max-width: 86%;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .projectsDiv .block .image .img:hover {
+  transform: translateY(calc(-50% - 4px));
+  box-shadow: 0 25px 55px -10px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.container .projectsDiv .block .image .background {
+  height: 320px;
+  width: 42vw;
+  max-width: 580px;
+  background: linear-gradient(135deg, #5be9b9 0%, #34d399 100%);
+  border-radius: 0px 24px 24px 0px;
+  box-shadow: 0 15px 35px -10px rgba(91, 233, 185, 0.35);
+}
+
+/* Multi-Image Layout (Project 2: Car Diagnostic Manager) */
+.container .projectsDiv .block .image .lefty {
+  height: 380px;
+  width: 44vw;
+  max-width: 600px;
+  margin-left: auto;
+  background: linear-gradient(135deg, #34d399 0%, #5be9b9 100%);
+  border-radius: 24px 0px 0px 24px;
+  box-shadow: 0 15px 35px -10px rgba(91, 233, 185, 0.35);
+}
+
+.container .projectsDiv .block .image .leftimg {
+  position: absolute;
+  top: 25px;
+  right: 5vw;
+  height: 230px;
+  margin: 0;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+  transform: none;
+}
+
+.secondimg {
+  position: absolute !important;
+  top: 155px !important;
+  right: 12vw !important;
+  height: 190px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+  z-index: 4 !important;
+  margin: 0 !important;
+  transform: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.secondimg:hover {
+  transform: translateY(-4px) !important;
+}
+
+/* Multi-Image Layout (Project 3: Nova Calendar - Perfectly Mirrored to Car Diagnostic Manager) */
+.container .projectsDiv .block .image.long .background,
+.long .background {
+  height: 380px !important;
+  width: 44vw !important;
+  max-width: 600px !important;
+  background: linear-gradient(135deg, #5be9b9 0%, #34d399 100%) !important;
+  border-radius: 0px 24px 24px 0px !important;
+  box-shadow: 0 15px 35px -10px rgba(91, 233, 185, 0.35) !important;
+}
+
+.container .projectsDiv .block .image.long .calimg:not(.secondimg),
+.container .projectsDiv .block .image .calimg:not(.secondimg),
+.container .projectsDiv .block .image.long .img:not(.secondimg) {
+  position: absolute !important;
+  top: 25px !important;
+  left: 5vw !important;
+  height: 230px !important;
+  margin: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06) !important;
+  z-index: 2 !important;
+  transform: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.container .projectsDiv .block .image.long .calimg:not(.secondimg):hover,
+.container .projectsDiv .block .image .calimg:not(.secondimg):hover,
+.container .projectsDiv .block .image.long .img:not(.secondimg):hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+}
+
+.container .projectsDiv .block .image.long .secondimg,
+.container .projectsDiv .block .image .calimg.secondimg {
+  position: absolute !important;
+  top: 155px !important;
+  left: 12vw !important;
+  height: 190px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+  z-index: 4 !important;
+  margin: 0 !important;
+  transform: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.container .projectsDiv .block .image.long .secondimg:hover,
+.container .projectsDiv .block .image .calimg.secondimg:hover {
+  transform: translateY(-4px) !important;
+}
+
+/* Subtle Gradient Divider */
+.project-divider {
+  width: 80vw;
+  max-width: 1100px;
+  height: 1px;
+  margin: 2.5rem auto;
+  background: linear-gradient(90deg, transparent 0%, #e2e8f0 20%, #e2e8f0 80%, transparent 100%);
+  border: none;
+}
+
+/* ==========================================================================
+   DESIGNS SLIDESHOW (SHOWCASE MARQUEE WITH DUAL EDGE FADE MASK)
+   ========================================================================== */
+.slideshow-wrapper {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  padding: 1.5rem 0 5rem 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slideshow .slide-1 {
+  display: flex;
+  align-items: center;
+  animation: moveSlideshow 30s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.slideshow .slide-1:hover {
+  animation-play-state: paused;
+}
+
+.slideshow .slide-1 img {
+  height: 190px;
+  width: auto;
+  margin: 0 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.slideshow .slide-1 img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(110, 7, 243, 0.22), 0 0 0 1px rgba(110, 7, 243, 0.25);
+}
+
+@keyframes moveSlideshow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% { 
+    transform: translateX(-50%);  
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+@media only screen and (max-width: 992px) {
+  .featured-saas-content {
+    grid-template-columns: 1fr;
+  }
+  .featured-saas-card {
+    padding: 30px 22px;
+  }
+  .saas-title {
+    font-size: 1.8rem;
+  }
+  .container .projectsDiv .block .text {
+    padding: 2rem 4vw;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container .title {
+    font-size: 2.2rem;
+    margin: 2.5rem auto 1rem auto;
+  }
+  .container .title .rectangle {
+    width: 35vw;
+    transform: translateX(-22vw) translateY(-2vw);
+  }
   .container .title .circle {
-    position: absolute;
-    width: 11.56vw;
-    transform: translateX(-5vw) translateY(-1vw);
-    z-index: -1;
+    width: 20vw;
+    transform: translateX(-8vw) translateY(-1vw);
   }
-  .container .projectsDiv .block{
-    display: flex;
-    position: relative;
+  .container .projectsDiv .block {
+    flex-direction: column !important;
+    width: 100vw;
+    min-height: auto;
+    padding: 1.5rem 0;
   }
-  .container .projectsDiv .block .text{
-    box-sizing: border-box;
-    width: 50%;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    padding: 3.5vw 8vw 4vw 8vw;
+  .container .projectsDiv .block .left {
+    flex-direction: column !important;
   }
-  .container .projectsDiv .block .text svg{
-    width: 3.2vw;
+  .container .projectsDiv .block .text {
+    width: 100%;
+    padding: 1.5rem 6vw;
+    align-items: flex-start;
   }
-  .container .projectsDiv .block .text h1{
-    margin-top: 0.9vw;
-    color:#6e07f3;
-    font-size: 1.8vw;
+  .container .projectsDiv .block .text h1 {
+    font-size: 1.4rem;
   }
-  .container .projectsDiv .block .text p{
-    color: #141c3a;
-    margin-top: 0.722vw;
-    font-weight: 500;
-    line-height: 2.3vw;
-    font-size: 1.3vw;
+  .container .projectsDiv .block .text p {
+    font-size: 0.92rem;
+    max-width: 100%;
   }
-  .container .projectsDiv .block .image{
-    width: 50%;
+  .container .projectsDiv .block .image {
+    width: 100%;
+    min-height: 280px;
+    height: 300px;
+    justify-content: center;
   }
-  .container .projectsDiv .block .left{
-    display: flex;
-    flex-direction: row-reverse
+  .container .projectsDiv .block .image .background,
+  .container .projectsDiv .block .image .lefty,
+  .long .background {
+    width: 88vw !important;
+    height: 260px !important;
+    border-radius: 20px !important;
+    margin: 0 auto !important;
   }
-  .container .projectsDiv .block .image .img{
-    position:absolute;
-    border-radius: 2vw;
-    margin-left: 6vw ;
-    top: 1vw;
-    height: 23vw;
+  .container .projectsDiv .block .image .img {
+    height: 220px;
+    margin: 0;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  
-  .container .projectsDiv .block .image .background{
-    height: 25vw;
-    width: 40vw;
-    background-color: #5be9b9;
-    border-radius: 0px 20px 20px 0px;
+  .container .projectsDiv .block .image .leftimg {
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 20px;
+    height: 180px;
   }
-  .container .projectsDiv .block .image .lefty{
-    height: 45vw;
-    background-color: #5be9b9;
-    border-radius: 20px 0px 0px 20px;
+  .secondimg {
+    display: none !important;
   }
-  .container .projectsDiv .block .image .leftimg{
-    margin-right: 6vw ;
-    border: #d3d8e5 2px solid;
-  }
-  .secondimg{
-    top: 25vw!important;
-    height: 19vw!important ;
-    margin-right: 9vw!important;
-    margin-left: 9vw!important ;
-  }
-  .long .background{
-    height: 45vw!important;
-  }
-  .long .img{
-    border: 2px solid #d3d8e5 ;
-  }
-  .marginTop{
-    margin-top: 7.2vw;
-  }
-  hr{
-    margin: 2vw 0;
-    border-top: solid 1px #d3d8e5;
+  .slideshow-wrapper {
+    padding: 1rem 0 3.5rem 0;
   }
   .slideshow {
-    position: relative;
-    width: 100vw;
-    height: 16.8vw;
-    margin-top: 4vw;
-    margin-bottom: 20vw;
-    overflow: hidden;
+    height: 170px;
   }
-  .slideshow .slide-1{
-    display: flex;
-    animation: moveSlideshow 15s linear infinite;
-    transform: translate3d(0, 0, 0);
+  .slideshow .slide-1 img {
+    height: 140px;
+    margin: 0 10px;
   }
-  .slideshow .slide-1 img{
-    height:13vw;
-    margin: 2vw;
-    border-radius: 1vw;
-    transition: 0.2s ease-in-out;
-  }
-  .slideshow .slide-1 img:hover{
-    transition: 0.2s ease-in-out;
-    transform: scale(1.3);
-  }
-
-
-  @keyframes moveSlideshow {
-    100% { 
-      transform: translateX(-135.5%);  
-    }
-  }
+}

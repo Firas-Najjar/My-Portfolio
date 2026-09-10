@@ -1,59 +1,96 @@
 .card {
   position: relative;
-  top: -180px;
+  top: -160px;
   font-family: "Poppins", sans-serif;
   color: #141c3a;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   display: flex;
-  width: 80vw;
+  width: 82vw;
+  max-width: 1200px;
   height: auto;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 24px;
   border: 1px solid #e6ecf8;
-  box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(230, 236, 248, 0.8);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 30px 60px -15px rgba(110, 7, 243, 0.15), 0 0 0 1px rgba(110, 7, 243, 0.2);
 }
 .card .column:first-child {
-  border-right: 1px solid #e6ecf8;
+  border-right: 1px solid #edf2f7;
 }
 .card .column {
-  border: #0000 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 40px;
+  padding: 64px 45px;
   width: 50%;
   box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+.card .column:hover {
+  background-color: #fafbfe;
 }
 .card .column h1 {
   text-align: center;
   font-weight: 700;
-  font-size: 1.7rem;
-  margin: 30px 0px;
+  font-size: 1.65rem;
+  color: #141c3a;
+  margin: 24px 0 14px 0;
 }
 .card .column .discription {
   text-align: center;
-  color: #141c3a;
-  font-weight: 500;
-  margin: 20px 0 0 0;
+  color: #4a5568;
+  font-weight: 400;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 370px;
 }
 .card .column .title {
-  font-weight: 500;
+  font-weight: 600;
   color: #6e07f3;
-  margin-top: 55px;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
 }
 .card .column svg {
-  width: 75px;
+  width: 68px;
+  height: 68px;
+  transition: transform 0.3s ease;
 }
-.card .column ul {
-  font-weight: 500;
+.card .column:hover svg {
+  transform: scale(1.08) rotate(3deg);
+}
+.card .column .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 420px;
   padding: 0;
-  text-align: center;
-  margin-top: 0;
+  margin-top: 6px;
   list-style: none;
 }
-.card .column li {
-  margin-bottom: 4px;
+.card .column .skills-list li {
+  background: #f4f6fa;
+  color: #2d3748;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+.card .column .skills-list li:hover {
+  background: #6e07f3;
+  color: #ffffff;
+  border-color: #6e07f3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(110, 7, 243, 0.25);
 }
 
 @media only screen and (max-width: 750px) {
